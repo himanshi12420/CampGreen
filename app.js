@@ -152,5 +152,5 @@ app.use((err, req, res, next) => {
 })
 
 app.listen(process.env.PORT || 3000, function () {
-    console.log('Server running on successfully.');
+    console.log('Server running successfully.');
 })

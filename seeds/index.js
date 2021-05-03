@@ -5,7 +5,9 @@ const { descriptors, places } = require('./seedHelpers');
 
 //const app = express();
 
-mongoose.connect('mongodb+srv://admin-himanshi:himanshi@2000@cluster0.bcbc9.mongodb.net/yelpCamp', { useNewUrlParser: true, useUnifiedTopology: true })
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelpCamp';
+
+mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("Mongo connection on!")
     })
