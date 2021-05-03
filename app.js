@@ -22,7 +22,7 @@ const userRoutes = require('./routes/user');
 const campgroundRoutes = require('./routes/campground');
 const reviewRoutes = require('./routes/review');
 
-mongoose.connect('mongodb://localhost:27017/yelpCamp', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
+mongoose.connect('mongodb+srv://admin-himanshi:himanshi@2000@cluster0.bcbc9.mongodb.net/yelpCamp', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
     .then(() => {
         console.log("Mongo connection on!")
     })

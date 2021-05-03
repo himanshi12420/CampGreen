@@ -5,7 +5,7 @@ const { descriptors, places } = require('./seedHelpers');
 
 //const app = express();
 
-mongoose.connect('mongodb://localhost:27017/yelpCamp', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://admin-himanshi:himanshi@2000@cluster0.bcbc9.mongodb.net/yelpCamp', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("Mongo connection on!")
     })
@@ -26,7 +26,7 @@ const seedDb = async () => {
         const rand1000 = Math.floor(Math.random() * 1000);
         const price = Math.floor(Math.random() * 20) + 5;
         const camp = new Campground({
-            author: '607ad1348991db0c946f667f',
+            author: '608fe22874545328bcb447f5',
             location: `${cities[rand1000].city}, ${cities[rand1000].state} `,
             title: `${sample(descriptors)} ${sample(places)}`,
             description: 'The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.',
@@ -37,11 +37,11 @@ const seedDb = async () => {
             },
             images: [
                 {
-                    url: 'https://res.cloudinary.com/dvuts8e73/image/upload/v1618817151/YelpCamp/a8blgtpwk5evowljhj7l.jpg',
+                    url: 'https://res.cloudinary.com/dvuts8e73/image/upload/v1619962745/YelpCamp/vdil5faahwwu6gne8xiw.jpg',
                     filename: 'YelpCamp/a8blgtpwk5evowljhj7l'
                 },
                 {
-                    url: 'https://res.cloudinary.com/dvuts8e73/image/upload/v1618817154/YelpCamp/kmz4phvocviwq2h5gc7k.jpg',
+                    url: 'https://res.cloudinary.com/dvuts8e73/image/upload/v1619962735/YelpCamp/mfkhrhfzcetjjfv2wtqz.jpg',
                     filename: 'YelpCamp/kmz4phvocviwq2h5gc7k'
                 }
             ]
