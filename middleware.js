@@ -1,5 +1,5 @@
 const { campgroundSchema, reviewSchema } = require('./validationSchema');
-const AppError = require('./utils/AppError');
+const AppError = require('./utils/appError');
 const Campground = require('./models/campgrounds');
 const Review = require('./models/reviews');
 
